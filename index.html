@@ -1,663 +1,94 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>江门市全布达纺织品有限公司 | Q.B.D Textile</title>
+
+在“健康活到150岁”这个终极目标之下，我给自己拆解了一个关键的里程碑项目——**“5030”**。
+
+即：**在50岁时，拥有30岁的生理机能。**
+
+这听起来可能有些疯狂，但科学界已经有人实现了逆龄，我相信未来我也可以。
+
+作为一个程序员，我习惯把身体看作是一艘要航行百年的“巨船”，或者一套精密运行的“硬件”。
+
+要想在未来探索精神、哲学和神学的“软件”高地，首先必须把“硬件”调试到最佳状态。
+
+就像修仙筑基一样，如果身体这个容器充满了故障（衰老、炎症、代谢故障），那么后续的修行都无从谈起。
+
+为了实现这个目标，我把 **AI** 作为我的首席顾问，开启了一场深度的“认知重构”**。
+
+### 01. 谋定后动：AI 规划师的全局视野
+
+之前与AI交流未来100年的成长规划时，它首先为我锁定的必修课就是：衰老科学、饮食营养、运动与睡眠。
+
+既然方向定了，昨天，我利用 **Google Deep Research**（谷歌深度研究工具），向它提出了一个具体的需求：
+
+> “希望在50岁时拥有30岁的生理指标，我需要掌握实现这一目标所需的全部营养科学知识。”
+
+之所以从营养学切入，是因为我最近在吃营养餐时产生了困惑：
+
+微量元素、蛋白质、纤维素……到底该吃什么？吃多少？何时吃？
+
+Google Deep Research 并没有给我一些模棱两可的废话，而是为我整理了一份详尽的**“5030实施蓝图”**：
+
+- **底层逻辑：** 了解衰老的九大原因（The 9 Hallmarks of Aging）。
     
-    <!-- 1. 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+- **核心燃料：** 常规营养元素（蛋白质、碳水、脂肪）的精准配比。
     
-    <!-- 2. 引入 React 和 ReactDOM -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+- **进阶策略：** 时间营养学（Timing is everything，何时进食比吃什么更重要）。
     
-    <!-- 3. 引入 Babel -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- 配置 Tailwind 主题色 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cyan: {
-                            400: '#22d3ee',
-                            500: '#06b6d4',
-                            600: '#0891b2',
-                            900: '#164e63',
-                            950: '#083344',
-                        },
-                        slate: {
-                            800: '#1e293b',
-                            900: '#0f172a',
-                            950: '#020617',
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 1s ease-out',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+- **辅助手段：** 关键的膳食补充剂策略。
     
-    <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
-        html { scroll-behavior: smooth; }
-    </style>
-</head>
-<body class="bg-slate-950 text-slate-300 antialiased selection:bg-cyan-500/30 selection:text-cyan-100">
-    <div id="root"></div>
+- **行动指南：** “回到30岁”的四个具体步骤。
 
-    <script type="text/babel">
-        const { useState, useEffect } = React;
+![[Pasted image 20251217065310.png]]
+### 02. 知识破壁机：把 AI 变成我的私教
 
-        // --- 图标组件 ---
-        const IconBase = ({ d, className, ...props }) => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>{d}</svg>
-        );
+拿到这份庞大而硬核的原始材料后，我并没有直接生啃，而是把它交给了 **秘塔AI**。
 
-        const Menu = (props) => <IconBase {...props} d={<><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></>} />;
-        const X = (props) => <IconBase {...props} d={<><path d="M18 6L6 18"/><path d="M6 6l12 12"/></>} />;
-        const Globe = (props) => <IconBase {...props} d={<><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></>} />;
-        const ShieldCheck = (props) => <IconBase {...props} d={<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></>} />;
-        const Leaf = (props) => <IconBase {...props} d={<><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 1.45 10 0 0-1 0-3-4.25"/><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 1.45 10 0 0-1 0-3-4.25" transform="rotate(90 12 12)"/></>} />;
-        const CheckCircle = (props) => <IconBase {...props} d={<><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></>} />;
-        const MapPin = (props) => <IconBase {...props} d={<><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></>} />;
-        const Phone = (props) => <IconBase {...props} d={<><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></>} />;
-        const Mail = (props) => <IconBase {...props} d={<><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>} />;
-        const ArrowRight = (props) => <IconBase {...props} d={<><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></>} />;
-        const ChevronDown = (props) => <IconBase {...props} d={<><polyline points="6 9 12 15 18 9"/></>} />;
-        const Cpu = (props) => <IconBase {...props} d={<><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></>} />;
-        const Activity = (props) => <IconBase {...props} d={<><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></>} />;
-        const Layers = (props) => <IconBase {...props} d={<><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></>} />;
-        const Truck = (props) => <IconBase {...props} d={<><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></>} />;
+我让它扮演一位“专家”，并要求以“黑板报风格”为我进行课程讲解。
 
+秘塔AI的“今天学点啥”，引入了谷歌的nano banana模型，可以生成具有高级语义理解和世界知识的图片，帮助我们吸收知识，简直是知识破壁机。
 
-        // --- 1. 数据中心 (Data Center) ---
-        // 核心更新：业务范围、服务理念、竞争优势
-        const CONTENT = {
-          en: {
-            nav: { home: 'Home', about: 'About', products: 'Products', certs: 'Certifications', tech: 'Our Advantages', contact: 'Contact', },
-            hero: { 
-                badge: 'GBA Precision Textile Solutions', 
-                title1: 'Weaving the', 
-                titleHighlight: 'Future', 
-                title2: 'Global Supply Chain', 
-                subtitle: 'Providing complete supply chain services and sustainable partnerships through innovation and excellence.', 
-                ctaPrimary: 'Explore Products', 
-                ctaSecondary: 'Certifications', 
-            },
-            about: { 
-                title: 'Service Philosophy', 
-                subtitle: 'More Than Just A Manufacturer', 
-                desc1: 'We are committed to providing customers with complete "Supply Chain" services and various value-added services.', 
-                desc2: 'Our goal is to establish sustainable partnerships with clients and enhance competitiveness through product innovation and excellent quality.', 
-                card1Title: 'Compliance First', 
-                card1Desc: 'Double Random Inspection Passed. Credit Code: 91440705MA56B6K3X6', 
-                card2Title: 'Global Reach', 
-                card2Desc: 'Domestic and Overseas Supply Chains for flexible delivery.', 
-                stats: 'Years Experience' 
-            },
-            products: { 
-                title: 'Business Scope', 
-                subtitle: 'Comprehensive Knitted & Woven Fabrics', 
-                categories: ['Knitted Series', 'Woven Series'], 
-                ctaTitle: 'Customization Service', 
-                ctaDesc: 'Materials mainly adopt conventional fibers and eco-friendly functional fibers. We provide tailored services to meet specific needs.', 
-                ctaButton: 'Contact for Customization' 
-            },
-            certs: { title: 'Global Standards', subtitle: 'Verified Quality & Sustainability', note: '* Verify validity via QR code on certificates.' },
-            tech: { 
-                title: 'Our Advantages', 
-                subtitle: 'Why Choose Q.B.D', 
-                item1: 'Global Supply Chain', 
-                desc1: 'Robust supply chain network covering both China and overseas markets to ensure stability.', 
-                item2: 'Digital Management', 
-                desc2: 'Full-process digital management system ensuring efficiency and accuracy.', 
-                item3: 'Visualized Delivery', 
-                desc3: 'Real-time visibility of the entire order delivery process for total peace of mind.', 
-            },
-            contact: { title: 'Connect With Us', subtitle: 'Start your smart supply chain journey.', addressTitle: 'Manufacturing Base', address: 'No.5 East Gongye Avenue, Luokeng Town, Xinhui District, Jiangmen, Guangdong', emailTitle: 'Business Inquiry', emailDesc: 'Response time: < 24 Hours', phoneTitle: 'Phone', formName: 'Name', formEmail: 'Email', formMsg: 'Requirement / Inquiry', formBtn: 'Send Message' },
-            footer: { company: 'Jiangmen City Quanbuda Textile Co., Ltd.', rights: 'All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Use' }
-          },
-          zh: {
-            nav: { home: '首页', about: '关于我们', products: '业务范围', certs: '资质认证', tech: '我们的优势', contact: '联系我们', },
-            hero: { 
-                badge: '大湾区精密纺织解决方案', 
-                title1: '全心织造', 
-                titleHighlight: '布满全球', 
-                title2: '完整供应链服务', 
-                subtitle: '为客户提供完整的供应链服务与增值服务，建立可持续的伙伴关系，通过创新与卓越质量增强竞争力。', 
-                ctaPrimary: '探索产品', 
-                ctaSecondary: '资质认证', 
-            },
-            about: { 
-                title: '服务理念', 
-                subtitle: '不仅仅是制造商', 
-                desc1: '我们致力于为客户提供完整的“供应链”服务，以及不同的增值服务。', 
-                desc2: '我们的目标是与客户建立可持续的伙伴关系，并通过产品创新和卓越质量增强客户的市场竞争力。', 
-                card1Title: '合规经营', 
-                card1Desc: '双随机抽查全优通过，信用代码: 91440705MA56B6K3X6', 
-                card2Title: '全球布局', 
-                card2Desc: '拥有中国及海外的供应链网络，交付灵活。', 
-                stats: '年行业经验' 
-            },
-            products: { 
-                title: '业务范围', 
-                subtitle: '全品类针织与梭织面料专家', 
-                categories: ['针织系列', '梭织系列'], 
-                ctaTitle: '定制化服务', 
-                ctaDesc: '原料主要采用常规类纤维和环保功能性纤维。我们提供深度的定制化服务，满足您的特殊设计需求。', 
-                ctaButton: '联系定制' 
-            },
-            certs: { title: '国际权威认证', subtitle: '符合欧美严苛标准，供应链安全护盾', note: '* 请扫描证书二维码验证有效性。' },
-            tech: { 
-                title: '我们的优势', 
-                subtitle: '选择全布达的理由', 
-                item1: '海内外供应链', 
-                desc1: '布局中国以及海外的供应链网络，确保产能充足与风险分散。', 
-                item2: '全流程数字化', 
-                desc2: '实施全流程数字化管理，从订单到生产实现数据驱动的高效协同。', 
-                item3: '交付可视化', 
-                desc3: '订单交付全流程可视化，让您实时掌握货物动态，安心无忧。', 
-            },
-            contact: { title: '联系全布达', subtitle: '开启您的智能供应链之旅', addressTitle: '制造基地', address: '广东省江门市新会区罗坑镇工业大道东5号', emailTitle: '商务垂询', emailDesc: '回复时效：24小时内', phoneTitle: '联系电话', formName: '姓名', formEmail: '电子邮箱', formMsg: '需求描述', formBtn: '发送询盘' },
-            footer: { company: '江门市全布达纺织品有限公司', rights: '版权所有', privacy: '隐私政策', terms: '使用条款' }
-          }
-        };
+![[Pasted image 20251217064641.png]]
 
-        // --- 产品数据更新 ---
-        const PRODUCTS_DATA = {
-          en: [
-            { 
-                category: "Knitted Series", 
-                items: [ 
-                    { title: "Full Category Knitted", subtitle: "Versatile & Comfortable", desc: "A comprehensive range of knitted products suitable for various applications.", tags: ["Full Category", "Elasticity", "Comfort"] }, 
-                    { title: "Functional Knitted", subtitle: "Eco-Friendly Fibers", desc: "Knitted fabrics made from eco-friendly functional fibers tailored for performance.", tags: ["Eco-Friendly", "Functional", "Customizable"] } 
-                ] 
-            },
-            { 
-                category: "Woven Series", 
-                items: [ 
-                    { title: "Denim & Jacket Fabrics", subtitle: "Durable & Stylish", desc: "High-quality woven fabrics for denim, trench coats, and jackets.", tags: ["Denim", "Trench Coat", "Jacket"] }, 
-                    { title: "Down Jacket & Lining", subtitle: "Protective & Smooth", desc: "Specialized fabrics for down jackets and premium linings.", tags: ["Down Proof", "Lining", "Smooth Touch"] } 
-                ] 
-            }
-          ],
-          zh: [
-            { 
-                category: "针织系列", 
-                items: [ 
-                    { title: "全品类针织产品", subtitle: "多样化 & 舒适", desc: "涵盖全品类的针织系列产品，适应多种服装应用场景。", tags: ["全品类", "高弹", "亲肤"] }, 
-                    { title: "环保功能性针织", subtitle: "绿色纤维", desc: "采用环保功能性纤维原料，可根据需求进行功能性定制。", tags: ["环保纤维", "功能性", "可定制"] } 
-                ] 
-            },
-            { 
-                category: "梭织系列", 
-                items: [ 
-                    { title: "牛仔/风衣/夹克料", subtitle: "挺括 & 时尚", desc: "高品质梭织面料，专为牛仔、风衣及夹克设计，质感出众。", tags: ["牛仔", "风衣料", "夹克料"] }, 
-                    { title: "羽绒服料 & 里布", subtitle: "防护 & 顺滑", desc: "专业的羽绒服面料及各类高档里布，提供优异的防钻绒与亲肤体验。", tags: ["羽绒服料", "里布", "防钻绒"] } 
-                ] 
-            }
-          ]
-        };
+AI 的表现令人惊喜：它分析了原始材料的逻辑，调用图像生成模型，为每一页PPT精准设计了有趣且贴合的示意图，并配上了生动的语音讲解。
 
-        const CERTIFICATES_DATA = {
-          en: [
-            { id: 1, name: 'OEKO-TEX® STANDARD 100', desc: 'Class I (Baby Article)', detail: 'Confidence in Textiles. Strict testing for harmful substances.', icon: ShieldCheck, color: 'text-green-400' },
-            { id: 2, name: 'Global Recycled Standard', desc: 'GRS V4.0 Certified', detail: 'Verified recycled content (Post-consumer Polyester).', icon: Globe, color: 'text-blue-400' },
-            { id: 3, name: 'U.S. Cotton Trust Protocol', desc: 'Protocol Member', detail: 'Commitment to sustainable cotton farming & transparency.', icon: Leaf, color: 'text-emerald-400' },
-            { id: 4, name: 'Datacolor Certify', desc: 'Color Management', detail: 'Standardized digital color workflow (Delta E < 1.0).', icon: CheckCircle, color: 'text-red-400' }
-          ],
-          zh: [
-            { id: 1, name: 'OEKO-TEX® STANDARD 100', desc: 'Class I (婴儿级)', detail: '信心纺织品。严格检测有害物质，保障生态安全。', icon: ShieldCheck, color: 'text-green-400' },
-            { id: 2, name: 'Global Recycled Standard', desc: 'GRS V4.0 认证', detail: '验证的再生材料含量 (消费后再生涤纶)。', icon: Globe, color: 'text-blue-400' },
-            { id: 3, name: 'U.S. Cotton Trust Protocol', desc: '美棉协议成员', detail: '致力于可持续棉花种植与供应链透明度。', icon: Leaf, color: 'text-emerald-400' },
-            { id: 4, name: 'Datacolor Certify', desc: '色彩管理认证', detail: '标准化的数字色彩工作流，确保颜色一致性。', icon: CheckCircle, color: 'text-red-400' }
-          ]
-        };
+![[Pasted image 20251217064803.png]]
 
-        // --- 2. 组件定义 ---
+今天早上五点半开始学习，我花了半小时，就完成了对这套复杂理论的第一次“下载”和“安装”。
 
-        const SectionTitle = ({ title, subtitle }) => (
-          <div className="text-center mb-16 relative">
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 w-24 h-24 bg-cyan-500/20 blur-3xl rounded-full -z-10"></div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white tracking-tight">
-              {title}
-            </h2>
-            <div className="h-1 w-24 mx-auto bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
-            {subtitle && (
-              <p className="mt-6 text-lg text-slate-400 font-light max-w-2xl mx-auto">
-                {subtitle}
-              </p>
-            )}
-          </div>
-        );
+### 03. 认知升级：修正我的“系统参数”
 
-        const TechCard = ({ icon: Icon, title, desc }) => (
-          <div className="group relative p-8 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-900/30 transition-colors">
-              <Icon className="w-7 h-7 text-cyan-400" />
-            </div>
-            <h4 className="text-xl font-bold text-white mb-3 font-mono">{title}</h4>
-            <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
-          </div>
-        );
+这次深度学习，优化了我的两个生活习惯：
 
-        // --- 3. 主应用 ---
-        const App = () => {
-          const [lang, setLang] = useState('en'); 
-          const [isMenuOpen, setIsMenuOpen] = useState(false);
-          const [activeProductTab, setActiveProductTab] = useState(0);
-          const [scrolled, setScrolled] = useState(false);
-          // 增加图片加载错误状态，用于调试
-          const [imgError, setImgError] = useState(false);
+ 1. **重构早餐认知：** 解决了“到底应该吃什么、何时补充”的困惑。早餐不仅仅是填饱肚子，而是唤醒代谢的时钟。
+    
+ 2. **确立优先级的“第一性原理”**： 睡眠 > 补剂。
+    
+    在保证充足睡眠的前提下，再谈营养补剂。如果睡眠不足，身体无法进行自我清理，再贵的补剂也是枉然。
 
-          const t = CONTENT[lang];
-          const products = PRODUCTS_DATA[lang];
-          const certs = CERTIFICATES_DATA[lang];
+### 百年课表
 
-          useEffect(() => {
-            const handleScroll = () => setScrolled(window.scrollY > 50);
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
-          }, []);
+这个中期里程碑目标：5030，也是百年学习计划中的第一个阶段：筑基期的修炼内容，现在我已经开始学习了。
 
-          const toggleLang = () => {
-            setLang(prev => prev === 'en' ? 'zh' : 'en');
-          };
+完整的课表如下：
 
-          return (
-            <div className="font-sans text-slate-300 antialiased bg-slate-950 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-100">
-              
-              {/* --- Navigation --- */}
-              <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-slate-800 py-3' : 'bg-transparent border-transparent py-6'}`}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="flex justify-between items-center">
-                    {/* Logo 更新部分: 使用图片 */}
-                    <div className="flex-shrink-0 flex items-center gap-3">
-                      {!imgError ? (
-                        <img 
-                          src="logo.jpg" 
-                          alt="Q.B.D Textile Logo" 
-                          // 修改点：使用 CSS 滤镜去除白底并反转文字颜色
-                          className="h-12 w-auto object-contain mix-blend-screen invert"
-                          onError={() => setImgError(true)} 
-                        />
-                      ) : (
-                        <div className="flex-shrink-0 flex items-center gap-3 border border-red-500/50 p-2 rounded bg-red-900/20">
-                           <div className="text-xs text-red-400 font-mono">
-                             Logo未找到<br/>请检查文件名:<br/>Gemini_Generated_Image...jpg
-                           </div>
-                           <div className="w-10 h-10 bg-gradient-to-br from-cyan-600 to-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">Q</div>
-                        </div>
-                      )}
-                    </div>
-                    
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center space-x-8">
-                      {Object.keys(t.nav).map((key) => (
-                        <a 
-                          key={key} 
-                          href={`#${key}`} 
-                          className="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors uppercase tracking-wider relative group"
-                        >
-                          {t.nav[key]}
-                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all group-hover:w-full"></span>
-                        </a>
-                      ))}
-                      
-                      {/* Language Toggle */}
-                      <button 
-                        onClick={toggleLang}
-                        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-700 hover:border-cyan-500/50 bg-slate-900/50 text-xs font-mono text-cyan-400 transition-all hover:shadow-[0_0_10px_rgba(34,211,238,0.2)]"
-                      >
-                        <Globe className="w-3 h-3" />
-                        <span>{lang === 'en' ? 'EN / 中文' : '中文 / EN'}</span>
-                      </button>
-                    </div>
+![[Pasted image 20251217070158.png]]
+### 写在最后
 
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center gap-4">
-                      <button onClick={toggleLang} className="text-cyan-400">
-                        <span className="font-bold text-xs border border-slate-700 px-2 py-1 rounded bg-slate-900">{lang.toUpperCase()}</span>
-                      </button>
-                      <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
-                        {isMenuOpen ? <X /> : <Menu />}
-                      </button>
-                    </div>
-                  </div>
-                </div>
+“5030项目”，是我漫长人生马拉松中的一段认知提升，也是我对于屏幕前的你的祝福，但愿我们一起健康，长长久久。
 
-                {/* Mobile Menu Panel */}
-                {isMenuOpen && (
-                  <div className="md:hidden bg-slate-900 border-b border-slate-800 absolute w-full top-full">
-                    <div className="px-4 pt-2 pb-6 space-y-2">
-                      {Object.keys(t.nav).map((key) => (
-                        <a
-                          key={key}
-                          href={`#${key}`}
-                          className="block px-3 py-3 text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800 rounded-lg"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {t.nav[key]}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </nav>
+我不把它看作一种负担，而是一次对自我肉体的重新编程。
 
-              {/* --- Hero Section --- */}
-              <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-slate-950">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.15),transparent_50%)]"></div>
-                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]"></div>
-                </div>
-                
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-cyan-500/30 rounded-full bg-cyan-950/30 backdrop-blur-sm animate-fade-in-up">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                    <span className="text-cyan-400 text-xs md:text-sm font-mono tracking-widest uppercase">{t.hero.badge}</span>
-                  </div>
-                  
-                  <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight tracking-tight">
-                    {t.hero.title1} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{t.hero.titleHighlight}</span>
-                    <br />
-                    <span className="text-3xl md:text-5xl font-light text-slate-400 mt-2 block">{t.hero.title2}</span>
-                  </h1>
-                  
-                  <p className="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                    {t.hero.subtitle}
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button className="group relative px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded overflow-hidden transition-all shadow-[0_0_20px_rgba(8,145,178,0.4)] hover:shadow-[0_0_30px_rgba(8,145,178,0.6)]">
-                      <span className="relative z-10 flex items-center gap-2">
-                        {t.hero.ctaPrimary} <ArrowRight className="w-4 h-4" />
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity"></div>
-                    </button>
-                    <button className="px-8 py-4 bg-transparent border border-slate-600 text-slate-300 hover:text-white hover:border-white font-medium rounded transition-all flex items-center justify-center gap-2 group">
-                      {t.hero.ctaSecondary}
-                      <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-              </section>
+通过 AI 工具的高效辅助，我正在将晦涩的医学知识转化为每日的行动本能。
 
-              {/* --- About / Service Philosophy Section --- */}
-              <section id="about" className="py-24 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div className="relative">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl opacity-20 blur"></div>
-                      <div className="bg-slate-900 rounded-xl overflow-hidden h-[500px] flex items-center justify-center relative border border-slate-800">
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
-                        <div className="absolute bottom-8 left-8 z-20">
-                            <div className="text-6xl font-bold text-white font-mono">15<span className="text-cyan-400">+</span></div>
-                            <div className="text-sm text-slate-400 uppercase tracking-widest">{t.about.stats}</div>
-                        </div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-cyan-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-dashed border-blue-500/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
-                        <span className="text-slate-600 font-mono text-xs uppercase tracking-widest">[Service Visualization]</span>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="w-8 h-[2px] bg-cyan-500"></span>
-                        <span className="text-cyan-500 font-mono text-sm uppercase tracking-widest">{t.about.title}</span>
-                      </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">{t.about.subtitle}</h3>
-                      <div className="space-y-6 text-slate-400 leading-relaxed text-lg">
-                        <p>{t.about.desc1}</p>
-                        <p>{t.about.desc2}</p>
-                      </div>
+愿我们在50岁时，用30岁的身体重聚。
 
-                      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-cyan-500/30 transition-colors">
-                          <ShieldCheck className="w-8 h-8 text-cyan-400 mb-3" />
-                          <h4 className="font-bold text-white mb-2">{t.about.card1Title}</h4>
-                          <p className="text-xs text-slate-500 font-mono">{t.about.card1Desc}</p>
-                        </div>
-                        <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-cyan-500/30 transition-colors">
-                          <Globe className="w-8 h-8 text-blue-400 mb-3" />
-                          <h4 className="font-bold text-white mb-2">{t.about.card2Title}</h4>
-                          <p className="text-xs text-slate-500 font-mono">{t.about.card2Desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+---
 
-              {/* --- Products / Business Scope Section --- */}
-              <section id="products" className="py-24 bg-slate-900 relative">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <SectionTitle title={t.products.title} subtitle={t.products.subtitle} />
+你好，我是程序员熊子峰 👨🏻‍💻
 
-                  <div className="flex justify-center mb-16">
-                    <div className="inline-flex bg-slate-950 rounded-full p-1 border border-slate-800">
-                      {products.map((cat, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setActiveProductTab(idx)}
-                          className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                            activeProductTab === idx 
-                              ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-[0_0_20px_rgba(8,145,178,0.4)]' 
-                              : 'text-slate-400 hover:text-white'
-                          }`}
-                        >
-                          {cat.category}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+正在进行一场**“人生重构”**的开源实验。
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {products[activeProductTab].items.map((item, idx) => (
-                      <div key={idx} className="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] flex flex-col md:flex-row h-full md:h-72">
-                        <div className="w-full md:w-2/5 bg-slate-900 relative overflow-hidden border-r border-slate-800 group-hover:border-cyan-900/50">
-                          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                          <div className={`absolute inset-0 opacity-20 ${idx % 2 === 0 ? 'bg-[url("https://www.transparenttextures.com/patterns/diagmonds-light.png")]' : 'bg-[url("https://www.transparenttextures.com/patterns/flower-trail.png")]'}`}></div>
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-slate-600 font-mono text-xs border border-slate-700 px-2 py-1 rounded">[PRODUCT IMAGE]</span>
-                          </div>
-                        </div>
-                        
-                        <div className="p-8 md:w-3/5 flex flex-col justify-between bg-gradient-to-br from-slate-950 to-slate-900">
-                          <div>
-                            <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">{item.title}</h3>
-                            <p className="text-xs text-blue-400 font-mono mb-4 uppercase tracking-wider">{item.subtitle}</p>
-                            <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                              {item.desc}
-                            </p>
-                          </div>
-                          <div className="flex flex-wrap gap-2 mt-auto">
-                            {item.tags.map(tag => (
-                              <span key={tag} className="px-3 py-1 bg-slate-800 text-cyan-200 text-xs rounded-full border border-slate-700">
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+🎯 **我的目标：** 50岁财务自由，150岁依旧健康。
 
-                  <div className="mt-16 p-1 bg-gradient-to-r from-slate-800 via-cyan-900/40 to-slate-800 rounded-2xl">
-                    <div className="bg-slate-950 rounded-xl p-10 text-center relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-                        <div className="relative z-10">
-                            <h3 className="text-2xl font-bold text-white mb-2">{t.products.ctaTitle}</h3>
-                            <p className="text-slate-400 mb-8 max-w-xl mx-auto">{t.products.ctaDesc}</p>
-                            <button className="bg-transparent border border-cyan-500 text-cyan-400 px-8 py-3 rounded font-bold hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.1)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)]">
-                                {t.products.ctaButton}
-                            </button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+这个公众号是我的“实验日志”。我以**写作、AI、投资和哲学**为武器，为自己“重新编程”，探索个体在AI时代的无限可能。
 
-              {/* --- Certifications --- */}
-              <section id="certs" className="py-24 bg-slate-950">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <SectionTitle title={t.certs.title} subtitle={t.certs.subtitle} />
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {certs.map((cert) => {
-                      const Icon = cert.icon;
-                      return (
-                        <div key={cert.id} className="group bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-                          <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <Icon className="w-24 h-24 text-white transform rotate-12" />
-                          </div>
-                          <div className={`w-14 h-14 ${cert.color} bg-slate-800/80 rounded-full flex items-center justify-center mb-6 shadow-lg`}>
-                            <Icon className="w-7 h-7" />
-                          </div>
-                          <h3 className="text-lg font-bold text-white mb-2 min-h-[3.5rem] flex items-center">
-                            {cert.name}
-                          </h3>
-                          <p className="text-xs font-bold text-cyan-600 uppercase tracking-widest mb-4 font-mono">
-                            {cert.desc}
-                          </p>
-                          <p className="text-sm text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
-                            {cert.detail}
-                          </p>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <p className="text-center text-slate-600 text-xs mt-12 font-mono">{t.certs.note}</p>
-                </div>
-              </section>
-
-              {/* --- Our Advantages (Tech) --- */}
-              <section id="tech" className="py-24 bg-slate-900 border-t border-slate-800">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <SectionTitle title={t.tech.title} subtitle={t.tech.subtitle} />
-                  
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <TechCard icon={Globe} title={t.tech.item1} desc={t.tech.desc1} />
-                    <TechCard icon={Layers} title={t.tech.item2} desc={t.tech.desc2} />
-                    <TechCard icon={Truck} title={t.tech.item3} desc={t.tech.desc3} />
-                  </div>
-                </div>
-              </section>
-
-              {/* --- Contact --- */}
-              <section id="contact" className="py-24 bg-slate-950 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-slate-950">
-                  <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-900/20 blur-[100px] rounded-full pointer-events-none"></div>
-                  <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-900/10 blur-[100px] rounded-full pointer-events-none"></div>
-                </div>
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                  <div className="bg-slate-900/80 backdrop-blur-xl rounded-3xl p-8 md:p-16 border border-slate-800 shadow-2xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                      <div>
-                        <h2 className="text-3xl font-bold text-white mb-4">{t.contact.title}</h2>
-                        <p className="text-cyan-400 mb-10 font-mono text-sm">{t.contact.subtitle}</p>
-                        
-                        <div className="space-y-8">
-                          <div className="flex items-start gap-5 group">
-                            <div className="w-10 h-10 rounded bg-slate-800 flex items-center justify-center group-hover:bg-cyan-900/30 transition-colors">
-                                <MapPin className="text-cyan-400 w-5 h-5" />
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-1">{t.contact.addressTitle}</h4>
-                              <p className="text-slate-400 text-sm leading-relaxed">{t.contact.address}</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-5 group">
-                            <div className="w-10 h-10 rounded bg-slate-800 flex items-center justify-center group-hover:bg-cyan-900/30 transition-colors">
-                                <Mail className="text-cyan-400 w-5 h-5" />
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-1">{t.contact.emailTitle}</h4>
-                              <p className="text-slate-400 text-sm font-mono">sales@quanbuda.com</p>
-                              <p className="text-slate-600 text-xs mt-1">{t.contact.emailDesc}</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-5 group">
-                            <div className="w-10 h-10 rounded bg-slate-800 flex items-center justify-center group-hover:bg-cyan-900/30 transition-colors">
-                                <Phone className="text-cyan-400 w-5 h-5" />
-                            </div>
-                            <div>
-                              <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-1">{t.contact.phoneTitle}</h4>
-                              <p className="text-slate-400 text-sm font-mono">+86 750 1234 5678</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Form */}
-                      <div className="bg-slate-950 p-8 rounded-2xl border border-slate-800 shadow-inner">
-                        <form className="space-y-5">
-                          <div>
-                            <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">{t.contact.formName}</label>
-                            <input type="text" className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all placeholder-slate-700" />
-                          </div>
-                          <div>
-                            <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">{t.contact.formEmail}</label>
-                            <input type="email" className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all placeholder-slate-700" />
-                          </div>
-                          <div>
-                            <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">{t.contact.formMsg}</label>
-                            <textarea rows="4" className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all placeholder-slate-700"></textarea>
-                          </div>
-                          <button type="button" className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-4 rounded transition-all shadow-lg shadow-cyan-900/20">
-                            {t.contact.formBtn}
-                          </button>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* --- Footer --- */}
-              <footer className="bg-slate-950 py-12 border-t border-slate-900">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-center md:text-left">
-                      <h5 className="text-white font-bold text-lg mb-2">{t.footer.company}</h5>
-                      <p className="text-sm text-slate-500">Global Precision Textile Solutions</p>
-                    </div>
-                    <div className="flex gap-8 text-sm text-slate-500">
-                      <a href="#" className="hover:text-cyan-400 transition-colors">{t.footer.privacy}</a>
-                      <a href="#" className="hover:text-cyan-400 transition-colors">{t.footer.terms}</a>
-                    </div>
-                  </div>
-                  <div className="mt-8 pt-8 border-t border-slate-900 text-center text-xs text-slate-600 font-mono">
-                    <p>&copy; 2025 Q.B.D Textile. {t.footer.rights} | ID: 91440705MA56B6K3X6</p>
-                  </div>
-                </div>
-              </footer>
-
-            </div>
-          );
-        };
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
-</body>
-</html>
+**欢迎同行，我们一起走向通透、健康与自由。**
