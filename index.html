@@ -1,94 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>5030 项目 · 在50岁时拥有30岁的身体 | 熊子峰</title>
+  <meta name="description" content="5030 项目：为在50岁时保持30岁的生理机能所做的规划、学习与实践日志。">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#7c3aed;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      color-scheme: dark;
+      font-family: 'Noto Sans SC', 'Inter', system-ui, -apple-system, 'Helvetica Neue', 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071023 0%, #071827 60%);color:#e6eef8;line-height:1.7}
+    .container{max-width:960px;margin:40px auto;padding:32px}
+    header{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+    .logo{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#0ea5a4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;box-shadow:0 8px 30px rgba(124,58,237,0.18)}
+    h1{font-size:28px;margin:0}
+    .lead{color:var(--muted);margin-top:6px}
 
-在“健康活到150岁”这个终极目标之下，我给自己拆解了一个关键的里程碑项目——**“5030”**。
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start;margin-bottom:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .eyebrow{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:8px}
+    .subtitle{font-size:16px;color:#dbeafe}
+    .meta{color:var(--muted);font-size:14px;margin-top:10px}
 
-即：**在50岁时，拥有30岁的生理机能。**
+    .toc{font-size:14px;color:var(--muted);margin-top:12px;display:flex;flex-direction:column;gap:8px}
+    .toc a{color:#cfe9ff;text-decoration:none}
 
-这听起来可能有些疯狂，但科学界已经有人实现了逆龄，我相信未来我也可以。
+    main .section{margin-bottom:22px}
+    .section h2{margin:0 0 12px 0;color:#fff}
+    .section p{margin:0 0 12px 0}
+    blockquote{margin:12px 0;padding:12px 16px;border-left:4px solid var(--accent);background:var(--glass);color:#cfe9ff}
+    ul{margin:8px 0 12px 20px}
+    li{margin:6px 0}
 
-作为一个程序员，我习惯把身体看作是一艘要航行百年的“巨船”，或者一套精密运行的“硬件”。
+    .image-figure{display:block;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);text-align:center}
+    .image-figure img{max-width:100%;height:auto;border-radius:8px}
+    .caption{font-size:13px;color:var(--muted);margin-top:8px}
 
-要想在未来探索精神、哲学和神学的“软件”高地，首先必须把“硬件”调试到最佳状态。
+    footer{margin-top:36px;color:var(--muted);font-size:14px;text-align:center}
 
-就像修仙筑基一样，如果身体这个容器充满了故障（衰老、炎症、代谢故障），那么后续的修行都无从谈起。
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .container{padding:18px;margin:18px}
+      h1{font-size:24px}
+    }
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(14,165,164,0.06));color:var(--accent);font-weight:700}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;border-radius:10px;text-decoration:none;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">5030</div>
+      <div>
+        <h1>5030 项目：在 50 岁时拥有 30 岁的生理机能</h1>
+        <div class="lead">一场以 AI 为助力的长期健康与认知升级计划 — 程序员熊子峰的实验日志</div>
+      </div>
+    </header>
 
-为了实现这个目标，我把 **AI** 作为我的首席顾问，开启了一场深度的“认知重构”**。
+    <div class="hero">
+      <div class="card">
+        <div class="eyebrow">目标概述</div>
+        <div class="subtitle">我的终极目标是“健康活到 150 岁”，5030 项目是其重要里程碑：在 50 岁时保持 30 岁的身体。</div>
+        <p class="meta">这看似激进，但借助衰老科学与 AI 的系统性规划，这个目标可以被逐步拆解为可执行的行动方案。</p>
 
-### 01. 谋定后动：AI 规划师的全局视野
+        <div style="margin-top:14px" class="toc">
+          <a href="#planner">01 · 谋定后动：AI 规划师的全局视野</a>
+          <a href="#knowledge">02 · 知识破壁机：把 AI 变成我的私教</a>
+          <a href="#upgrade">03 · 认知升级：修正我的“系统参数”</a>
+          <a href="#schedule">百年课表 · 筑基期</a>
+        </div>
 
-之前与AI交流未来100年的成长规划时，它首先为我锁定的必修课就是：衰老科学、饮食营养、运动与睡眠。
+        <a class="cta" href="#planner">查看实施蓝图</a>
+      </div>
 
-既然方向定了，昨天，我利用 **Google Deep Research**（谷歌深度研究工具），向它提出了一个具体的需求：
+      <aside class="card">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div class="badge">AI 驱动</div>
+          <div style="font-weight:700;margin-top:8px">作者 · 熊子峰</div>
+          <div class="meta">程序员 · 写作者 · 健康实验者</div>
+          <div style="margin-top:10px" class="meta">目标：50 岁财务自由，150 岁健康长寿</div>
+        </div>
+      </aside>
+    </div>
 
-> “希望在50岁时拥有30岁的生理指标，我需要掌握实现这一目标所需的全部营养科学知识。”
+    <main>
+      <article id="planner" class="section card">
+        <h2>01. 谋定后动：AI 规划师的全局视野</h2>
+        <p>与 AI 讨论未来 100 年的成长规划时，我被建议重点学习：衰老科学、饮食营养、运动与睡眠。</p>
+        <p>为了解决“如何在 50 岁时保有 30 岁指标”的问题，我向 <strong>Google Deep Research</strong> 提出了明确需求，得到了详尽的“5030 实施蓝图”：</p>
+        <ul>
+          <li><strong>底层逻辑：</strong>了解衰老的九大原因（The 9 Hallmarks of Aging）。</li>
+          <li><strong>核心燃料：</strong>常规营养元素（蛋白质、碳水、脂肪）的精准配比。</li>
+          <li><strong>进阶策略：</strong>时间营养学（Timing is everything）。</li>
+          <li><strong>辅助手段：</strong>关键的膳食补充剂策略。</li>
+          <li><strong>行动指南：</strong>“回到 30 岁”的四个具体步骤。</li>
+        </ul>
+        <figure class="image-figure">
+          <img src="images/blueprint-placeholder.png" alt="5030 实施蓝图示意图" onerror="this.style.opacity=0.6;this.nextElementSibling && (this.nextElementSibling.style.display='block')">
+          <div class="caption">示意图：5030 实施蓝图（如需可替换为实际图片）</div>
+        </figure>
+      </article>
 
-之所以从营养学切入，是因为我最近在吃营养餐时产生了困惑：
+      <article id="knowledge" class="section card">
+        <h2>02. 知识破壁机：把 AI 变成我的私教</h2>
+        <p>我把原始的研究材料交给秘塔 AI（提示：让它以“黑板报风格”讲解），并结合图像生成模型来辅助学习，使得复杂理论更易吸收。</p>
+        <figure class="image-figure">
+          <img src="images/ai-teacher-placeholder.png" alt="AI 教学示意" onerror="this.style.opacity=0.6;this.nextElementSibling && (this.nextElementSibling.style.display='block')">
+          <div class="caption">AI 自动生成示意图与语音讲解，提升记忆与理解效率</div>
+        </figure>
+        <p>早上 5:30 开始学习，半小时内完成了这套复杂理论的第一次“下载”和“安装”。这就是高效学习的力量。</p>
+      </article>
 
-微量元素、蛋白质、纤维素……到底该吃什么？吃多少？何时吃？
+      <article id="upgrade" class="section card">
+        <h2>03. 认知升级：修正我的“系统参数”</h2>
+        <p>这次学习让我优化了两个重要的生活习惯：</p>
+        <ol>
+          <li><strong>重构早餐认知：</strong>早餐是唤醒代谢时钟的关键，不仅仅是填饱肚子。</li>
+          <li><strong>确立优先级的第一性原理：</strong>睡眠 > 补剂 —— 睡眠不足时再好的补剂也无效。</li>
+        </ol>
+      </article>
 
-Google Deep Research 并没有给我一些模棱两可的废话，而是为我整理了一份详尽的**“5030实施蓝图”**：
+      <article id="schedule" class="section card">
+        <h2>百年课表 · 筑基期</h2>
+        <p>5030 是百年计划中的第一个阶段（筑基期）。我已经开始了系统化学习，并将学习内容转化为每日可执行的行动。</p>
+        <figure class="image-figure">
+          <img src="images/course-schedule-placeholder.png" alt="5030 课程表" onerror="this.style.opacity=0.6;this.nextElementSibling && (this.nextElementSibling.style.display='block')">
+          <div class="caption">完整课表示意（可替换为实际课表图片）</div>
+        </figure>
+      </article>
 
-- **底层逻辑：** 了解衰老的九大原因（The 9 Hallmarks of Aging）。
-    
-- **核心燃料：** 常规营养元素（蛋白质、碳水、脂肪）的精准配比。
-    
-- **进阶策略：** 时间营养学（Timing is everything，何时进食比吃什么更重要）。
-    
-- **辅助手段：** 关键的膳食补充剂策略。
-    
-- **行动指南：** “回到30岁”的四个具体步骤。
+      <article class="section card">
+        <h2>写在最后</h2>
+        <p>“5030 项目”是一次认知与行为上的长期实验。通过 AI 的辅助，我把晦涩的医学知识转化为每天可执行的策略，希望我们都能在 50 岁时保有 30 岁的身体。</p>
+        <p>欢迎同行，一起走向通透、健康与自由。</p>
+      </article>
+    </main>
 
-![[Pasted image 20251217065310.png]]
-### 02. 知识破壁机：把 AI 变成我的私教
+    <footer class="card">
+      <p>你好，我是 <strong>程序员熊子峰</strong> 👨🏻‍💻 — 正在做一场“人生重构”的开源实验。</p>
+      <p class="meta">🎯 目标：50 岁财务自由，150 岁依旧健康。</p>
+      <p class="meta">如果你希望，我可以为页面添加真实图片、阅读量统计、或将其部署为静态站点。</p>
+    </footer>
+  </div>
 
-拿到这份庞大而硬核的原始材料后，我并没有直接生啃，而是把它交给了 **秘塔AI**。
-
-我让它扮演一位“专家”，并要求以“黑板报风格”为我进行课程讲解。
-
-秘塔AI的“今天学点啥”，引入了谷歌的nano banana模型，可以生成具有高级语义理解和世界知识的图片，帮助我们吸收知识，简直是知识破壁机。
-
-![[Pasted image 20251217064641.png]]
-
-AI 的表现令人惊喜：它分析了原始材料的逻辑，调用图像生成模型，为每一页PPT精准设计了有趣且贴合的示意图，并配上了生动的语音讲解。
-
-![[Pasted image 20251217064803.png]]
-
-今天早上五点半开始学习，我花了半小时，就完成了对这套复杂理论的第一次“下载”和“安装”。
-
-### 03. 认知升级：修正我的“系统参数”
-
-这次深度学习，优化了我的两个生活习惯：
-
- 1. **重构早餐认知：** 解决了“到底应该吃什么、何时补充”的困惑。早餐不仅仅是填饱肚子，而是唤醒代谢的时钟。
-    
- 2. **确立优先级的“第一性原理”**： 睡眠 > 补剂。
-    
-    在保证充足睡眠的前提下，再谈营养补剂。如果睡眠不足，身体无法进行自我清理，再贵的补剂也是枉然。
-
-### 百年课表
-
-这个中期里程碑目标：5030，也是百年学习计划中的第一个阶段：筑基期的修炼内容，现在我已经开始学习了。
-
-完整的课表如下：
-
-![[Pasted image 20251217070158.png]]
-### 写在最后
-
-“5030项目”，是我漫长人生马拉松中的一段认知提升，也是我对于屏幕前的你的祝福，但愿我们一起健康，长长久久。
-
-我不把它看作一种负担，而是一次对自我肉体的重新编程。
-
-通过 AI 工具的高效辅助，我正在将晦涩的医学知识转化为每日的行动本能。
-
-愿我们在50岁时，用30岁的身体重聚。
-
----
-
-你好，我是程序员熊子峰 👨🏻‍💻
-
-正在进行一场**“人生重构”**的开源实验。
-
-🎯 **我的目标：** 50岁财务自由，150岁依旧健康。
-
-这个公众号是我的“实验日志”。我以**写作、AI、投资和哲学**为武器，为自己“重新编程”，探索个体在AI时代的无限可能。
-
-**欢迎同行，我们一起走向通透、健康与自由。**
+  <script>
+    // 小脚本：平滑滚动支持（如果浏览器兼容）
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script>
+</body>
+</html>
